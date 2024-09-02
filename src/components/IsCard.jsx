@@ -4,22 +4,19 @@ import Link from "next/link";
 import { useState } from "react";
 
 export const IsCard = ({ blogs }) => {
- 
-
-  const [multiple, setMultiple] = useState(1);
-  const [posts, setPosts] = useState(9 * multiple);
+  const [posts, setPosts] = useState(9);
+  const clickButton = () => {
+    setPosts((prevMultiple) => prevMultiple + 3);
+  };
 
   return (
-    <div className=" flex flex-wrap w-[1296px] mb-[100px] gap-[90px]  h-[880px] ">
+    <div className=" flex flex-wrap w-[1296px] mb-[100px] gap-[90px] ">
       {blogs
         .slice(0, posts)
         .map(({ id, cover_image, title, tag_list, published_at }, index) => {
           return (
-            <Link href={`/list/${id}`}>
-              <div
-                className="border w-[350px] rounded-xl p-4 gap-4 bg-white"
-                key={index}
-              >
+            <Link href={`/blog/${id}`} key={index}>
+              <div className="border w-[350px] rounded-xl p-4 gap-4 bg-white">
                 <img
                   src={cover_image}
                   alt=""
@@ -35,9 +32,13 @@ export const IsCard = ({ blogs }) => {
                   <div>{published_at}</div>
                 </div>
               </div>
+              <div></div>
             </Link>
           );
         })}
+      <button onClick={clickButton} className="">
+        Load More
+      </button>
     </div>
   );
 };

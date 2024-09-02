@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { IsCard } from "./IsCard";
 
@@ -21,11 +19,6 @@ export const AllPost = async () => {
         <div>View All</div>
       </div>
       <IsCard blogs={obResult} />
-
-      <div>
-        {" "}
-        <button className="">Load More</button>
-      </div>
     </div>
   );
 };

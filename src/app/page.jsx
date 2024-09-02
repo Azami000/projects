@@ -1,8 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { Trending } from "@/components/Trending";
-
-import React from "react";
 import { AllPost } from "@/components/AllPost";
+
 
 const Home = async () => {
   const result = await fetch("https://dev.to/api/articles");
@@ -13,6 +12,7 @@ const Home = async () => {
       <Hero />
       <Trending />
       <AllPost />
+      
     </div>
   );
 };
