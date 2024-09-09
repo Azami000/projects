@@ -15,8 +15,8 @@ export const Header = () => {
     push(href);
   };
   return (
-    <div className="flex flex-row items-center justify-center py-8 px-80 gap-2">
-      <div className="flex gap-28">
+    <div className="flex flex-row items-center justify-center w-screen py-8 px-80 gap-2">
+      <div className="flex gap-28 w-[1216px] justify-between">
         <div className="flex flex-row w-[158px] h-[36px] items-center">
           <img src="/Union.png" alt="" className="w-[36px] h-[36px]" />
           <img
@@ -38,12 +38,13 @@ export const Header = () => {
               </button>
             ))}
           </div>
-          <div className="flex border relative bg-gray-500">
-            <input type="text" placeholder="Search" className="flex p-2" />
-            <IoIosSearch className=" flex w-4 h-4 absolute right-2 top-3" />
-          </div>
+        </div>
+        <div className="flex border relative bg-gray-500">
+          <input type="text" placeholder="Search" className="flex p-2" />
+          <IoIosSearch className=" flex w-4 h-4 absolute right-2 top-3" />
         </div>
       </div>
+    
     </div>
   );
 };

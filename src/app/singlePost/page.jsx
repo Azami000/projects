@@ -1,7 +1,11 @@
-import React from "react";
+import Singleid from "@/components/Singleid";
 
-const page = () => {
-  return <div>page</div>;
+const Page = () => {
+  return (
+    <div className="w-full items-center gap-8">
+      <Singleid />
+    </div>
+  );
 };
 
-export default page;
+export default Page;

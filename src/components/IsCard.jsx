@@ -10,13 +10,13 @@ export const IsCard = ({ blogs }) => {
   };
 
   return (
-    <div className=" flex flex-wrap w-[1296px] mb-[100px] gap-[90px] ">
+    <div className=" flex  flex-wrap mb-[100px] gap-[90px] ">
       {blogs
         .slice(0, posts)
         .map(({ id, cover_image, title, tag_list, published_at }, index) => {
           return (
             <Link href={`/blog/${id}`} key={index}>
-              <div className="border w-[350px] rounded-xl p-4 gap-4 bg-white">
+              <div className="border w-[392px] rounded-xl p-4 gap-4 bg-white">
                 <img
                   src={cover_image}
                   alt=""
